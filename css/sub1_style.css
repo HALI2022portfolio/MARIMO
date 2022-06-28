@@ -1,0 +1,550 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFLightA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black; }
+body{font-family: 'GangwonEdu_OTFLightA'; line-height: 24px; }
+
+
+/* -------maintop */
+#maintop{
+    width: 1320px;
+    height: 25px;
+    margin: auto;
+    margin-top: 5px;
+}
+#maintop ul{
+    float: right;
+}
+#maintop li{
+    float: left;
+}
+#maintop li a{
+    font-size: 15px;
+    padding: 0 25px;
+    color: #333333;
+    font-size: 18px;
+}
+#maintop li a:hover{
+    text-decoration: underline;
+}
+
+/* -------header2 */
+#header2{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 90;
+ 
+}
+.header_inner{
+    width: 1050px;
+    margin: 10px auto;
+}
+.header_inner .logo{
+  float: left;
+}
+.header_inner .nav{
+    float: right;
+}
+.nav>li{
+    float: left;
+    padding: 20px 25px 5px 25px;
+}
+.nav>li:hover{
+    background: url(../images/nav_hover_marimo.png) no-repeat center top;
+}
+.nav>li>a{
+    width: 180px;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 20px;
+}
+.nav>li:last-child{
+    margin-right: 100px;
+}
+/* -------메인네비 서브메뉴 만들기! */
+.mainsub{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    /* 여기의 기준은 뭐가 되는거지..? */
+    left: 0;
+    display: none;
+}
+.mainsub a{
+    font-family: 'NanumBarunGothic';
+}
+.mainsub div{
+    width: 1320px;
+    margin: auto;
+    height: 200px;
+} 
+.mainsub ul{
+    float: left;
+    width: 155px;
+    margin-top: 10px;
+}
+.mainsub li {
+    padding: 10px 0;
+}
+.mainsub div ul:nth-child(1){
+  margin-left: 430px;
+  margin-right: 20px;
+}
+.mainsub div ul:nth-child(3){
+    margin-left: 13px;
+    margin-right: 15px;
+}
+
+/* -------메인메뉴 서브 보이게 하기! 
+display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
+
+.mainsub li a:hover{
+    background-color: #80d8cc;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* 박스 1_메인배너 */
+#box1{
+    width: 100%;
+    height: 550px;
+    background: url(../images/sub1_mainbanner_bg.jpg) no-repeat center top;
+    margin-top: 90px;
+    text-align: center;
+}
+#box1 h1, #box1 p{
+    color: white;
+    text-shadow: 4px 4px 4px rgba(123, 111, 82,0.9);
+}
+#box1 h1{
+    font-family: 'Yeongdo-Rg';
+    font-size: 55px;
+    font-weight: normal;
+    padding-top: 250px;
+}
+#box1 p{
+    letter-spacing: 3px;
+}
+
+/* 박스 2_브랜드 아이덴티티*/
+#box2{
+    width: 1320px;
+    height: 500px;
+    margin: 60px auto;
+    text-align: center;
+}
+ #box2 h1{
+    display: inline-block;
+   width: 135px;
+   height: 93px;
+ }
+#box2 ul li{
+    float: left;
+    margin-top: 80px;
+    width: 450px;
+    height: 275px;
+}
+#box2 ul li:nth-child(1){
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    text-align: left;
+    line-height: 30px;
+    padding-left: 200px;
+    padding-top: 60px;
+}
+#box2 ul li:nth-child(2){
+    float: right;
+    padding-right: 150px;
+}
+
+#box2 ul li b{
+    display: inline-block;
+    background: linear-gradient(to bottom, white 50%, rgba(88, 201, 186,0.7) 50%);
+}
+#box2 ul li .pinkpen{
+    display: inline-block;
+    background: linear-gradient(to bottom, white 50%, rgba(254, 188, 196,0.7) 50%);
+}
+
+/* 박스 3_로고 스토리*/
+#box3{
+    width: 100%;
+    height: 1541px;
+    margin: auto;
+    background: url(../images/sub1_logostory_bg.jpg) no-repeat center top;
+   
+}
+.box3_inner{
+    width: 1320px;
+    height: 1700px;
+    margin: auto;
+    position: relative;
+}
+.box3_inner img{
+    position: absolute;
+    display: block;
+}
+.box3_inner img:nth-child(1){
+    top: 60px;  /*타이틀 위쪽 여백 60px*/
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box3_inner img:nth-child(2){
+    top: 360px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box3_inner img:nth-child(3){
+    top: 245px;
+    left: 120px;
+}
+.box3_inner img:nth-child(4){
+    top: 255px;
+    right: 120px;
+}
+.box3_inner img:nth-child(5){
+    top: 510px;
+    left: 180px;
+}
+.box3_inner img:nth-child(6){
+    top: 540px;
+    right: 220px;
+}
+.box3_inner img:nth-child(7){
+    top: 950px;
+    right: 340px;
+}
+
+/* 박스4_브랜드 컬러  */
+#box4{
+    width: 100%;
+    overflow: hidden;
+}
+.box4_inner{
+    width: 1320px;
+    height: 1520px;
+    /* 높이 임의로 잡음 */
+    margin: 60px auto;
+    position: relative;
+}
+.box4_inner img{
+    display: block;
+    position: absolute;
+    z-index: 2;
+}
+.box4_inner img:nth-child(1){
+    /* 브랜드컬러 제목 */
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .box4_inner img:nth-child(2){
+    /* 메인 컬러 이미지 */
+    top: 200px;
+    left: 95px;
+ }
+ .box4_inner img:nth-child(3){
+    /* 컬러칩1 */
+    top: 540px;
+    left: 100px ;
+ }
+ .box4_inner img:nth-child(4){
+    /* 컬러칩2 */
+    top: 510px;
+    left: 240px ;
+ }
+ .box4_inner img:nth-child(5){
+    /* 컬러칩3 */
+    top: 570px;
+    left: 380px ;
+ }
+ .box4_inner img:nth-child(6){
+    /* 컬러칩4 */
+    top: 490px;
+    left: 480px ;
+ }
+ .box4_inner img:nth-child(7){
+    /* 서브 컬러 이미지 */
+    bottom: 210px;
+    right: 200px;
+ }
+ .box4_inner img:nth-child(8){
+    /* 포인트컬러칩1 */
+    bottom: 295px;
+    left: 58%;
+ }
+ .box4_inner img:nth-child(9){
+    /* 포인트컬러칩2 */
+    bottom: 380px;
+    left: 72%;
+ }
+ .pinkbox{
+    /* 핑크배경 박스 */
+    background-color: rgba(254, 188, 196,0.3);
+    width: 900px;
+    height: 390px;
+    position: absolute;
+    top: 520px;
+    left: -455px;
+}
+.mintbox{
+    /* 민트배경 박스 */ /*어떻게 배치..?*/
+    background-color: rgba(128, 216, 204,0.3);
+    width: 1200px;
+    height: 215px;
+    position: absolute;
+    bottom: 125px;
+    right: -730px;
+}
+#box4 p{
+    font-family: 'NanumBarunGothic';
+    position: absolute;
+    text-align: center;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+#box4 p:nth-child(10){
+    /* 메인 컬러 설명글 */
+    top: 410px;
+    right: 200px;
+}
+#box4 p:nth-child(11){
+    /* 포인트 컬러 설명글 */
+    bottom: 300px;
+    left: 230px;
+}
+#box4 .bluetext{
+    color: #307cbf;
+}
+#box4 .pinktext{
+    color: #fbb7c0;
+}
+
+
+
+ /* 박스 5_로케이션 */
+ #box5{
+    width: 100%;
+    height: 1250px;
+    background-color: #8bdcd1;
+ }
+ .box5_inner{
+    width: 1320px;
+    margin: 60px auto;
+    position: relative;
+ }
+ .box5_inner img:nth-child(1){
+    /* 로케이션 제목 이미지 */
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+ .box5_inner iframe{
+    /* 구글 지도 */
+    position: absolute;
+    top: 210px;
+    left: 50%;
+    transform: translateX(-50%);
+ }
+.location{
+    /* 구글지도 하단 회색 박스 */
+    width: 900px;
+    height: 65px ;
+    background-color: #fee8e8 ;
+    position: absolute;
+    top: 610px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.location li{
+   float: left;
+}
+.location li:nth-child(1){
+    /* 지도 하단 회색 박스 안에 marimo */
+    font-family: 'Yeongdo-Rg';
+    font-size: 25px;
+    margin: 25px 40px 0 115px;
+    margin-left: 115px;
+    margin-right: 60px;
+}
+.location li:nth-child(2){
+     /* 지도 하단 회색 박스 안에 주소 */
+    font-family: 'NanumBarunGothic';
+    margin-top: 20px;
+}
+.box5_inner a{
+    display: block;
+    position: absolute;
+    top: 430px;
+    right: 330px;
+    transition: all 0.7s;
+}
+.box5_inner a .arrow{
+    /* 지도에서 길찾기 안에 화살표 이미지 */
+    position: absolute;
+    top: 145px;
+    right: -30px;
+}
+.box5_inner a p{
+    position: absolute;
+    top: 162.25px;
+    right: 17px;
+    padding: 6px;
+    background-color: white;
+    border-radius: 50px;
+    transition: all 1s;
+}
+.box5_inner a:hover p{
+    /* 길찾기 안에 화살표 호버효과 */
+    transform: translateX(40px);
+}
+
+.box5_inner img:nth-child(5){
+    /* 지하철 이미지 */
+    position: absolute;
+    top: 730px;
+    left: 300px;
+}
+.box5_inner img:nth-child(6){
+    /* 버스 이미지 */
+    position: absolute;
+    top: 915px;
+    left: 300px;
+}
+.box5_inner dl{
+    /* 대중교통 안내 */
+    position: absolute;
+    width: 600px;
+    top: 680px;
+    left: 420px;
+    font-size: 30px;
+    line-height: 40px;
+    
+}
+.box5_inner dt{
+    display: inline-block;
+    background-color: white;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 5px 20px;
+    border-radius: 22px;
+    font-weight: bold;
+}
+.box5_inner dd{
+    font-family: 'NanumBarunGothic';
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 22px;
+    padding: 10px 20px;
+}
+/* 마지막 footer!!! */
+#footer{
+    width: 100%;
+    background: url(../images/footer_bg.jpg);
+    height: 350px;
+}
+.footer_inner1{
+    width: 1320px;
+    margin: auto;
+    padding-top: 50px;
+}
+.footer_inner1 ul> li> a>img{
+    opacity: 0.5;
+}
+.footer_inner1 ul> li> a>img:hover{
+    opacity: 1;
+}
+.footer_inner1 ul{
+    float: right;
+}
+.footer_inner1 li, .footer_inner2 li{
+    float: left;
+    margin-left: 15px;
+}
+.footer_inner2{
+    width: 650px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    color: #41505b;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 p{
+    margin: 30px 0;
+}
+.footer_inner2 li:last-child{
+    padding-right: 120px;
+}
+.footer_inner2 a{
+    color: #4e6270;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 a:hover{
+    color: #5c7486;
+}
+
+
+/* 진짜 마지막!! 탑버튼!!! */
+.topbutton{
+    position:fixed; 
+    bottom:50px; 
+    right:50px; 
+    display:none;
+  }

@@ -1,0 +1,480 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFLightA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black; }
+body{font-family: 'GangwonEdu_OTFLightA'; line-height: 24px; }
+
+
+/* -------maintop */
+#maintop{
+    width: 1320px;
+    height: 25px;
+    margin: auto;
+    margin-top: 5px;
+}
+#maintop ul{
+    float: right;
+}
+#maintop li{
+    float: left;
+}
+#maintop li a{
+    font-size: 15px;
+    padding: 0 25px;
+    color: #333333;
+    font-size: 18px;
+}
+#maintop li a:hover{
+    text-decoration: underline;
+}
+
+/* -------header2 */
+#header2{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 90;
+ 
+}
+.header_inner{
+    width: 1050px;
+    margin: 10px auto;
+}
+.header_inner .logo{
+  float: left;
+}
+.header_inner .nav{
+    float: right;
+}
+.nav>li{
+    float: left;
+    padding: 20px 25px 5px 25px;
+}
+.nav>li:hover{
+    background: url(../images/nav_hover_marimo.png) no-repeat center top;
+}
+.nav>li>a{
+    width: 180px;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 20px;
+}
+.nav>li:last-child{
+    margin-right: 100px;
+}
+/* -------메인네비 서브메뉴 만들기! */
+.mainsub{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    /* 여기의 기준은 뭐가 되는거지..? */
+    left: 0;
+    display: none;
+}
+.mainsub a{
+    font-family: 'NanumBarunGothic';
+}
+.mainsub div{
+    width: 1320px;
+    margin: auto;
+    height: 200px;
+} 
+.mainsub ul{
+    float: left;
+    width: 155px;
+    margin-top: 10px;
+}
+.mainsub li {
+    padding: 10px 0;
+}
+.mainsub div ul:nth-child(1){
+  margin-left: 430px;
+  margin-right: 20px;
+}
+.mainsub div ul:nth-child(3){
+    margin-left: 13px;
+    margin-right: 15px;
+}
+
+/* -------메인메뉴 서브 보이게 하기! 
+display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
+
+.mainsub li a:hover{
+    background-color: #80d8cc;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* ^^^^^^^^^^^^ 공통 ^^^^^^^^^^^ */
+#top{
+    width: 100%;
+    height: 200px;
+    background-color:white 50%;
+    text-align: center;
+}
+#top h1{
+    font-size: 100px;
+    font-family: 'Yeongdo-Rg';
+    line-height: 120px;
+    color: #0e4064;
+    margin-top: 100px;
+    padding-top: 50px;
+    text-shadow: 7px 7px 10px rgba(103, 202, 213, 0.8);
+}
+
+/* 박스 1 메인 대형 배너 */
+#box1{
+    width: 100%;
+    height: 500px;
+    background: url(../images/sub2_box1_bg.jpg) no-repeat center top fixed;
+}
+
+/* 박스 2  이번주 소식*/
+#box2{
+    width: 100%;
+    height: 760px;
+    background: url(../images/sub2_box2_bg.jpg) center top;
+}
+.box2_title{
+    width: 1320px;
+    height: 74px;
+    margin: auto;
+    text-align: left;
+    padding: 70px 0 50px 100px;
+}
+#scroller li{
+    position: relative;
+    margin-right: 20px;
+    padding-top: 50px;
+}
+#scroller li:hover{
+    margin-right: 250px;
+    transition: all 0.5s;
+}
+#scroller li:hover .scroll_hover{
+    opacity: 1;
+}
+.scroll_hover{
+    /* 호버시, 커지는 이미지 사이즈에 맞게 크기 입력! */
+    width: 496px;
+    height: 482px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+
+/* 박스 3 핫이슈 포토 */
+#box3{
+    width: 100%;
+    height: 915px;
+    position: relative;
+}
+.box3_title{
+    width: 1320px;
+    height: 75px;
+    margin: auto;
+    text-align: left;
+    padding: 70px 0 50px 100px;
+}
+
+/* 탭메뉴 꾸미기 */
+.tab{
+    width:1000px;
+    margin: auto;
+  }
+  .tabnav{
+    float: left;
+    margin-top: 140px;
+    margin-right: 50px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .tabnav li:nth-child(2){
+    margin: 30px 0 30px 0;
+  }
+  .tabnav li a{ 
+    display: block;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 25px;
+    position: relative;
+
+  }
+  
+  /* 탭메뉴 클릭했을 때 변화 꾸미기 */
+  .tabnav li .active{
+
+  }
+  .tabnav li a:hover{
+    text-decoration: underline;
+    list-style: #80d8cc;
+  }
+  .tabnav li a.active{
+    background: #80d8cc; 
+    color:white
+  }
+  
+  /* 탭컨테츠 꾸미기 */
+  .tabcontent{
+    float: left;
+    width: 500px;
+    height:400px; 
+    padding: 20px; 
+    margin-top: 25px;
+    
+    border: #0e4064 solid 2px;
+    position: relative;
+    top: -1px;
+  }
+  
+  /* 버블~버블~ 버블버블  */
+.bubble{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    overflow:hidden;
+}
+span{
+    display: block;
+    position: absolute;
+    bottom:-100px;
+    width:40px;
+    height: 40px;
+    background: rgba(155, 220, 228,0.7);
+    border-radius: 50%;
+    animation: bubble 7s ease-in-out infinite;
+}
+.bubble span:nth-child(1){
+    width:40px;
+    height: 40px;
+    left:0%;
+    animation-duration: 15s;
+}
+.bubble span:nth-child(2){
+    width:20px;
+    height: 20px;
+    left:10%;
+    animation-duration: 15s;
+    animation-delay:1s;
+}
+.bubble span:nth-child(3){
+    width:50px;
+    height: 50px;
+    left:20%;
+    animation-duration: 17s;
+    animation-delay:2s;
+}
+.bubble span:nth-child(4){
+    width:80px;
+    height: 80px;
+    left:40%;
+    animation-duration: 14s;
+    animation-delay:0s;
+}
+.bubble span:nth-child(5){
+    width:35px;
+    height: 35px;
+    left:50%;
+    animation-duration: 13s;
+    animation-delay:1s;
+}
+.bubble span:nth-child(6){
+    width:45px;
+    height: 45px;
+    left:60%;
+    animation-duration: 15s;
+    animation-delay:3s;
+}
+.bubble span:nth-child(7){
+    width:25px;
+    height: 25px;
+    left:70%;
+    animation-duration: 14s;
+    animation-delay:2s;
+}
+.bubble span:nth-child(8){
+    width:80px;
+    height: 80px;
+    left:80%;
+    animation-duration: 13s;
+    animation-delay:1s;
+}
+    
+@keyframes bubble{
+    0%{
+        bottom:-100px;
+        transform: translateX(0);
+    }
+    35%{
+        transform: translateX(100px);
+    }
+    70%{
+        transform: translateX(200px); 
+    }
+    100%{
+        bottom:110%;
+        transform: translateX(0);
+    }
+}
+
+/* 박스 4 - 핫이슈 비디오 */
+#box4{
+    width: 100%;
+    background: url(../images/sub2_box4_bg.png) center top;
+    margin-top: -250px;
+}
+.box4_inner{
+    width: 1320px;
+    height: 1400px;
+    margin: auto;
+}
+.box4_inner .title{
+    display: block;
+    padding: 300px 0 50px 100px;
+}
+.box4_inner li{
+    float: left;
+    background-color: white;
+    width: 625px;
+    height: 170px;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+.box4_inner .left{
+    /* 핫이슈 비디오 이미지 꾸미기 */
+    float: left;
+    margin: 15px 0px 15px 15px;
+}
+.box4_inner .right{
+    /* 핫이슈 비디오 텍스트 꾸미기 */
+    float: left;
+    margin: 20px 10px 20px 20px;
+}
+.box4_inner .right p{
+    /* 비디오 내용 설명 */
+    font-family: 'NanumBarunGothic';
+    padding-top: 5px;
+}
+.box4_inner .right div{
+    /* 비디오 아이콘 들어있는 박스!!! */
+   text-align: right;
+   width: 317px;
+   height: 30px;
+   margin-bottom: 5px;
+   border-bottom: solid 2px #999;
+}
+.box4_inner .right div a{
+    /* 아이콘 a태그 꾸미기!! */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.box4_inner .right div a:nth-child(1){
+    /* 좋아요 아이콘 배경 */
+    background: url(../images/sub2_box4_icon1.png);
+}
+.box4_inner .right div a:nth-child(1):hover{
+    /* 좋아요 아이콘 호버*/
+    background: url(../images/sub2_box4_icon1_hover.png);
+}
+.box4_inner .right div a:nth-child(2){
+    /* 하트 아이콘 배경 */
+    background: url(../images/sub2_box4_icon2.png);
+}
+.box4_inner .right div a:nth-child(2):hover{
+    /* 하트 아이콘 호버*/
+    background: url(../images/sub2_box4_icon2_hover.png);
+}
+.box4_inner .right div a:nth-child(3){
+    /* 공유 아이콘 배경 */
+    background: url(../images/sub2_box4_icon3.png);
+}
+.box4_inner .right div a:nth-child(3):hover{
+    /* 공유 아이콘 호버*/
+    background: url(../images/sub2_box4_icon3_hover.png);
+}
+.box4_inner .right div a:nth-child(4){
+    /* 시계 아이콘 배경 */
+    background: url(../images/sub2_box4_icon4.png);
+}
+.box4_inner .right div a:nth-child(4):hover{
+    /* 시계 아이콘 호버*/
+    background: url(../images/sub2_box4_icon4_hover.png);
+}
+
+.box4_inner .right dd{
+    float: left;
+    background-color: #febcc4;
+    border-radius: 50px;
+    margin-right: 10px;
+    padding: 1px 9px;
+    font-family: 'NanumBarunGothic';
+    font-size: 13px;
+    font-weight: bold;
+    color: white;
+}
+
+.box4_inner ul li:nth-child(odd), .box4_inner ul li:nth-child(even){
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
