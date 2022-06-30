@@ -265,7 +265,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
 }
 
 /* -------컨텐츠 시작~~ */
-/* 박스 1 */
+/* 박스 1 - 이번주소식*/
 #box1{
     clear: both;
     width: 1320px;
@@ -286,7 +286,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     
 }
 
-/* 박스 2 */
+/* 박스 2 - 인기소식*/
 #box2{
     background-color: #0f4164;
     width: 100%;
@@ -311,6 +311,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     border-bottom: solid 2px rgb(148, 148, 148);
 }
 #box2 .whitebox1{
+    /* 포토 */
     width: 1320px;
     height: 810px;
     margin: auto;
@@ -318,30 +319,62 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     background: url(../images/box2_bg1-1.png) no-repeat center top;
 }
 #box2 .whitebox2{
+    /* 비디오 */
     width: 1320px;
     height: 800px;
     margin: auto;
     text-align: left;
     background: url(../images/box2_bg2-2.png) no-repeat center top;
 }
-.thumbnail{
+.thumbnail1,.thumbnail2{
     margin: auto;
     width: 1050px;
     height: 800px;
     padding-top: 100px;
     padding-left: 48px;
 }
-.thumbnail li{
+.thumbnail1 li, .thumbnail2 li{
     float: left;
+    overflow: hidden;
 }
-.thumbnail li:nth-child(4),
-.thumbnail li:nth-child(5),
-.thumbnail li:nth-child(6){
+/* 포토 화이트 박스 여백값 */
+.thumbnail1 li:nth-child(1),
+.thumbnail1 li:nth-child(2){
+    margin-left: 28px;
+    border-radius: 10px;
+}
+.thumbnail1 li:nth-child(3),
+.thumbnail1 li:nth-child(4),
+.thumbnail1 li:nth-child(5),
+.thumbnail1 li:nth-child(6),
+.thumbnail1 li:nth-child(7),
+.thumbnail1 li:nth-child(8),
+.thumbnail1 li:nth-child(9),
+.thumbnail1 li:nth-child(10),
+.thumbnail1 li:nth-child(11),
+.thumbnail1 li:nth-child(12){
+    margin-left: 30px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* 비디오 화이트 박스 여백값 */
+.thumbnail2 li:nth-child(4),
+.thumbnail2 li:nth-child(5),
+.thumbnail2 li:nth-child(6){
     padding-top: 20px;
 }
-.thumbnail>li:nth-child(2),
-.thumbnail>li:nth-child(5){
+.thumbnail2 li:nth-child(2),
+.thumbnail2 li:nth-child(5){
     margin: 0 15px;
+}
+/* 포토 사진 호버 */
+.thumbnail1 li a img:hover{
+    transform: scale(1.1, 1.1);
+}
+.thumbnail1 li a img{
+    transition: all 0.5s;
+    display: block;
 }
 .pinktag li{
     float: left;
@@ -354,6 +387,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
 .pinktag li:nth-child(2){
     margin-left: 8px;
     margin-right: 8px;
+    margin-top: 5px;
 }
 .hotmore{
     text-align: center;
