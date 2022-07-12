@@ -1,0 +1,606 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFLightA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black; }
+body{font-family: 'GangwonEdu_OTFLightA'; line-height: 24px; }
+
+
+/* -------maintop */
+#maintop{
+    width: 1320px;
+    height: 25px;
+    margin: auto;
+    margin-top: 5px;
+}
+#maintop ul{
+    float: right;
+}
+#maintop li{
+    float: left;
+}
+#maintop li a{
+    font-size: 15px;
+    padding: 0 25px;
+    color: #333333;
+    font-size: 18px;
+}
+#maintop li a:hover{
+    text-decoration: underline;
+}
+
+/* -------header2 */
+#header2{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 90;
+ 
+}
+.header_inner{
+    width: 1050px;
+    margin: 10px auto;
+}
+.header_inner .logo{
+  float: left;
+}
+.header_inner .nav{
+    float: right;
+}
+.nav>li{
+    float: left;
+    padding: 20px 25px 5px 25px;
+}
+.nav>li:hover{
+    background: url(../images/nav_hover_marimo.png) no-repeat center top;
+}
+.nav>li>a{
+    width: 180px;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 20px;
+}
+.nav>li:last-child{
+    margin-right: 100px;
+}
+/* -------메인네비 서브메뉴 만들기! */
+.mainsub{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    /* 여기의 기준은 뭐가 되는거지..? */
+    left: 0;
+    display: none;
+}
+.mainsub a{
+    font-family: 'NanumBarunGothic';
+}
+.mainsub div{
+    width: 1320px;
+    margin: auto;
+    height: 200px;
+} 
+.mainsub ul{
+    float: left;
+    width: 155px;
+    margin-top: 10px;
+}
+.mainsub li {
+    padding: 10px 0;
+}
+.mainsub div ul:nth-child(1){
+  margin-left: 430px;
+  margin-right: 20px;
+}
+.mainsub div ul:nth-child(3){
+    margin-left: 13px;
+    margin-right: 15px;
+}
+
+/* -------메인메뉴 서브 보이게 하기! 
+display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
+
+.mainsub li a:hover{
+    background-color: #80d8cc;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+}
+
+/*서브페이지3 교육 내용 시작!!!! */
+
+
+/* 박스 1 - 교육단체 소개 */
+#box1{
+    width: 1320px;
+    height: 1000px; /*임의로 잡음!!*/
+    margin: 0 auto;
+    position: relative;
+}
+#box1>img{
+    /* 박스 제목 모두 여백 동일하게 맞춰주기!! */
+    margin-top: 150px;
+    margin-left: 70px;
+    text-align: center;
+}
+#box1 p{
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    top: 260px;
+    left: 310px;
+}
+/* box1 교육단체 탭메뉴 꾸미기 */
+.tab{
+    width:1200px; 
+    overflow: hidden;
+    margin: auto;
+  }
+  .tabnav{
+    width:1200px; 
+    overflow: hidden;
+    padding-left: 70px;
+  }
+  .tabnav li{
+    float: left;
+    margin-top: 50px;
+    
+  }
+  .tabnav li a{ 
+    display: inline-block;
+    width: 223px;
+    height: 223px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+  }
+  /* box1 탭메뉴 배경이미지 넣기 */
+  .tabnav li:nth-child(1){
+    background: url(../images/sub3_box1_aida.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(2){
+    background: url(../images/sub3_box1_ssi.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(3){
+    background: url(../images/sub3_box1_padi.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(4){
+    background: url(../images/sub3_box1_cmas.png) no-repeat center top;
+  }
+  
+  /* 호버 이미지, 클릭 이미지!! */
+  .tabnav li:nth-child(1) a:hover, .tabnav li:nth-child(1) .active{
+    background: url(../images/sub3_box1_aida_hover.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(2) a:hover, .tabnav li:nth-child(2) .active{
+    background: url(../images/sub3_box1_ssi_hover.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(3) a:hover, .tabnav li:nth-child(3) .active{
+    background: url(../images/sub3_box1_padi_hover.png) no-repeat center top;
+  }
+  .tabnav li:nth-child(4) a:hover, .tabnav li:nth-child(4) .active{
+    background: url(../images/sub3_box1_cmas_hover.png) no-repeat center top;
+  }
+
+  /* 탭메뉴 클릭했을 때 변화 꾸미기 */
+  .tabnav li .active{
+
+}
+
+/* 탭컨텐츠 꾸미기 */
+#tab01, #tab02, #tab03, #tab04{
+    position: relative;
+    width: 1136px;
+    height: 425px;
+    margin: auto;
+}
+
+#tab01{
+    background: url(../images/sub3_box1_aida_contents_bg.png);
+}
+#tab02{
+    background: url(../images/sub3_box1_ssi_contents_bg.png);
+}
+#tab03{
+    background: url(../images/sub3_box1_padi_contents_bg.png);
+}
+#tab04{
+    background: url(../images/sub3_box1_cmas_contents_bg.png);
+}
+
+/* 테이블테그 꾸미기 */
+table{
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    margin: auto;
+    top: 65px;
+    left: 80px;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    border-collapse: collapse;
+    
+}
+table td{
+    font-weight: bold;
+    border-left: none;
+}
+table tr:nth-child(2n){
+    background: url(../images/sub3_box1_bluebg.png);
+}
+
+
+/* 박스 2 - 교육 커리큘럼 소개 */
+#box2{
+    width: 100%;
+    height: 700px; /*임의로 잡음!!*/
+    background: url(../images/sub3_box2_bg.png) no-repeat bottom;
+    margin-bottom: 60px;
+}
+.box2_inner{
+  width: 1320px;
+  height: 700px;
+  margin: 50px auto;
+  position: relative;
+}
+.box2_inner>img{
+    /* 박스 제목 */
+    margin-top: 50px;
+    margin-left: 70px;
+    text-align: center;
+}
+.box2_inner>p{
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    top: 160px;
+    left: 385px;
+}
+.course_img li{
+    float: left;
+    width: 345px;
+    height: 230px;
+    margin-left: 70px;
+    margin-top: 60px;
+    overflow: hidden;
+    position: relative; /*자세히보기 박스 기준*/
+    border-radius: 0 0 20px 20px;
+    transition: all 1s;
+}
+.course_img li:nth-child(2){
+    margin-top: 55px;
+}
+.course_img img{
+    /* 커리큘럼 이미지 */
+    display: block;
+}
+.course_img li div{
+    /* 자세히 보기 박스 */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 230px;
+    background-color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    opacity: 0;
+    transition: all 1s;
+}
+.course_img li div b{
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.7);
+}
+.course_img li div p{
+    padding-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.course_img li:hover div{
+    top: 170px;
+    opacity: 1;
+}
+.course_img li:hover{
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+.course_text li{
+    float: left;
+    margin-left: 73px;
+    margin-top: 40px;
+    position: relative; /*h1, span 기준*/
+}
+.course_text h1{
+    /* 숫자 */
+    display: inline-block;
+    position: absolute;
+    left: 30px;
+    bottom: 92px;
+    font-family: 'NanumBarunGothic';
+    font-size: 50px;
+    z-index: 2;
+}
+.course_text span{
+    /* 동그라미 */
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.course_text li:nth-child(1) span{
+    background-color: rgba(104, 202, 213,0.7);
+}
+.course_text li:nth-child(2) span{
+    background-color: rgba(46, 165, 191,0.7);
+}
+.course_text li:nth-child(2){
+    margin-right: 5px;
+}
+.course_text li:nth-child(3) span{
+    background-color: rgba(48, 124, 191,0.7);
+}
+.course_text p{
+    /* 커리큘럼 내용 */
+    text-align: center;
+    width: 330px;
+    height: 120px;
+    padding-top: 10px;
+    padding-left: 10px;
+    border-radius: 20px 20px 20px 0;
+    background-color: white;
+    font-family: 'NanumBarunGothic';
+    font-size: 20px;
+    line-height: 35px;
+}
+
+/* 박스3 장비소개 */
+#box3{
+    width: 100%;
+    height: 1320px;
+    background: url(../images/sub3_box3_bg.png) no-repeat center bottom;
+}
+.box3_inner1, .box3_inner2{
+    width: 1320px;
+    margin: auto;
+    position: relative;
+}
+.box3_inner1{
+    height: 190px;
+}
+.box3_inner2{
+    height: 1120px;
+}
+.box3_inner1>img {
+    /* 장비 제목 이미지 */
+    margin-top: 50px;
+    margin-left: 70px;
+    text-align: center;
+}
+.box3_inner1 p{
+    /* 제목 옆 설명 */
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    font-weight: normal;
+    position: absolute;
+    top: 160px;
+    left: 325px;
+}
+.box3_inner2 a{
+    display: inline-block;
+}
+.box3_inner2 #gear1{
+    /* 마스크 & 스노클 */
+    position: absolute;
+    top: 240px;
+    left: 500px;
+}
+.box3_inner2 #gear2{
+    /* 슈트 & 웨이트 */
+    position: absolute;
+    top: 455px;
+    right: 410px;
+}
+.box3_inner2 #gear3{
+    /* 롱핀 & 삭스 */
+    position: absolute;
+    top: 830px;
+    left: 380px;
+}
+.box3_inner2 .popgear1,
+.box3_inner2 .popgear2,
+.box3_inner2 .popgear3{
+    width: 370px;
+    background-color: rgba(255, 255, 255, 0.4);
+   position: absolute;
+   text-align: center;
+  /* display: none; */
+}
+.box3_inner2 .popgear1{
+    /* 팝업_마스크 & 스노클 */
+   width: 370px;
+   height: 530px;
+   border-radius: 150px 0 150px 150px;
+   top: 320px;
+   left: 110px;
+   display: none;
+}
+.box3_inner2 .popgear2{
+    /* 팝업_슈트 & 웨이트 */
+   height: 595px;
+   border-radius: 0 150px 150px 150px;
+   top: 520px;
+   right: 25px;
+   display: none;
+}
+.box3_inner2 .popgear3{
+    /* 팝업_롱핀 & 삭스 */
+   height: 580px;
+   border-radius: 150px 150px 0 150px;
+   top: 305px;
+   left: 0;
+   display: none;
+}
+.box3_inner2 .popgear1 img,
+.box3_inner2 .popgear2 img,
+.box3_inner2 .popgear3 img{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.box3_inner2 .popgear1 p,
+.box3_inner2 .popgear2 p,
+.box3_inner2 .popgear3 p{
+    font-family: 'NanumBarunGothic';
+    font-size: 18px;
+    line-height: 30px;
+}
+.close1 a, .close2 a, .close3 a{
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 2px 5px;
+    position: absolute;
+}
+.box3_inner2 .close1 a{
+    top: -35px;
+    left: 303px;
+}
+.box3_inner2 .close2 a{
+    top: -35px;
+    left: 0;
+}
+.box3_inner2 .close3 a{
+    bottom: -34px;
+    left: 303px;
+}
+
+.box3_inner2 .click{
+    /* 클릭!! */
+    display: block;
+    position: absolute;
+    top: 180px;
+    left: 575px;
+    animation: fly_click  2.5s  infinite;
+}
+/* 클릭 애니메이션 */
+@keyframes fly_click{
+    0%{bottom: 0px;
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+    100%{bottom: 0px;
+        transform: translateY(0);}
+}
+
+
+
+/* 마지막 footer!!! */
+#footer{
+    width: 100%;
+    background: url(../images/footer_bg.jpg);
+    height: 350px;
+}
+.footer_inner1{
+    width: 1320px;
+    margin: auto;
+    padding-top: 50px;
+}
+.footer_inner1 ul> li> a>img{
+    opacity: 0.5;
+}
+.footer_inner1 ul> li> a>img:hover{
+    opacity: 1;
+}
+.footer_inner1 ul{
+    float: right;
+}
+.footer_inner1 li, .footer_inner2 li{
+    float: left;
+    margin-left: 15px;
+}
+.footer_inner2{
+    width: 650px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    color: #41505b;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 p{
+    margin: 30px 0;
+}
+.footer_inner2 li:last-child{
+    padding-right: 120px;
+}
+.footer_inner2 a{
+    color: #4e6270;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 a:hover{
+    color: #5c7486;
+}
+
+/* 진짜 마지막!! 탑버튼!!! */
+.topbutton{
+    position:fixed; 
+    bottom:50px; 
+    right:50px; 
+    display:none;
+  }
