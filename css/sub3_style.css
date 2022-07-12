@@ -278,6 +278,7 @@ table td{
 }
 table tr:nth-child(2n){
     background: url(../images/sub3_box1_bluebg.png) no-repeat;
+    background-size: cover;
 }
 
 
