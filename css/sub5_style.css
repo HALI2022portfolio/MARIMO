@@ -1,0 +1,451 @@
+@font-face {
+    font-family: 'GangwonEdu_OTFBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GangwonEdu_OTFLightA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yeongdo-Rg';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/Yeongdo-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+   }
+   
+   @font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+   }
+   
+   .nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+   }
+
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{text-decoration: none; color: black; }
+body{font-family: 'GangwonEdu_OTFLightA'; line-height: 24px; }
+
+
+/* -------maintop */
+#maintop{
+    width: 1320px;
+    height: 25px;
+    margin: auto;
+    margin-top: 5px;
+}
+#maintop ul{
+    float: right;
+}
+#maintop li{
+    float: left;
+}
+#maintop li a{
+    font-size: 15px;
+    padding: 0 25px;
+    color: #333333;
+    font-size: 18px;
+}
+#maintop li a:hover{
+    text-decoration: underline;
+}
+
+/* -------header2 */
+#header2{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 90;
+ 
+}
+.header_inner{
+    width: 1050px;
+    margin: 10px auto;
+}
+.header_inner .logo{
+  float: left;
+}
+.header_inner .nav{
+    float: right;
+}
+.nav>li{
+    float: left;
+    padding: 20px 25px 5px 25px;
+}
+.nav>li:hover{
+    background: url(../images/nav_hover_marimo.png) no-repeat center top;
+}
+.nav>li>a{
+    width: 180px;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-size: 20px;
+}
+.nav>li:last-child{
+    margin-right: 100px;
+}
+/* -------메인네비 서브메뉴 만들기! */
+.mainsub{
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    /* 여기의 기준은 뭐가 되는거지..? */
+    left: 0;
+    display: none;
+}
+.mainsub a{
+    font-family: 'NanumBarunGothic';
+}
+.mainsub div{
+    width: 1320px;
+    margin: auto;
+    height: 200px;
+} 
+.mainsub ul{
+    float: left;
+    width: 155px;
+    margin-top: 10px;
+}
+.mainsub li {
+    padding: 10px 0;
+}
+.mainsub div ul:nth-child(1){
+  margin-left: 430px;
+  margin-right: 20px;
+}
+.mainsub div ul:nth-child(3){
+    margin-left: 13px;
+    margin-right: 15px;
+}
+
+/* -------메인메뉴 서브 보이게 하기! 
+display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
+
+.mainsub li a:hover{
+    background-color: #80d8cc;
+    border-radius: 30px;
+    color: white;
+    padding: 10px 20px;
+}
+
+
+/* 서브페이지5 정기구독 내용 시작!! */
+/* 박스 1 */
+#box1{
+    width: 1000px;
+    height: 550px;
+    margin: auto;
+    margin-top: 150px;
+    font-family: 'NanumBarunGothic';
+}
+.left{
+    float: left;
+    width: 327px;
+    height: 465px;
+    margin-left: 80px;
+}
+.right{
+    float: right;
+    width: 430px;
+    height: 465px;
+    margin-right: 80px;
+    text-align: left;
+}
+.right{
+    display: inline-block;
+}
+
+.right h4{
+    font-family: 'NanumBarunGothic';
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.right p{
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.right .title1{
+    /* 정가 여백 */
+    margin-right: 63px;
+
+}
+.right .title2{
+    /* 구독자 평점 여백 */
+    margin: 30px 20px 30px 0;
+}
+.right .title{
+    /* 판매가, 배송료 여백 */
+    margin-right: 50px;
+}
+.right span{
+    /* 할인금액 84,000원 따로 꾸며주기 */
+    font-size: 20px;
+    font-weight: 700;
+}
+.right hr{
+    margin-bottom: 50px;
+}
+.right .now, .margin{
+    font-family: 'GangwonEdu_OTFBoldA';
+    font-weight: bold;
+    font-size: 20px;
+    padding: 20px 70px;
+    border: 1.5px solid #333333;
+    border-radius: 30px;
+}
+.right .margin{
+    margin-left: 10px;
+}
+.right .now:hover, .margin:hover{
+    background-color: #0a395e;
+    color: white;
+}
+.right .heart{
+    /* 31 ♥ */
+    text-align: right;
+    font-weight: bold;
+    display: inline-block;
+    border: 1.5px solid #ff9eab;
+    border-radius: 30px;
+    color: #ff9eab;
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    margin-left: 350px;
+}
+.heart:hover{
+    background-color: #ff9eab;
+    color: white;
+}
+
+/* 박스 2 - 회사 간략 설명 */
+#box2{
+    width: 1000px;
+    height: 925px;
+    border-top: 1.5px solid #191919;
+    padding-top: 100px;
+    margin: auto;
+}
+#box2 img, #box3 img, #box4 img{
+    display: block;
+}
+
+/* 박스 3 - 매거진 디테일 */
+#box3{
+    width: 1000px;
+    height: 2000px;
+    margin: auto;
+}
+
+/* 박스 4 - 사은품 비치백! */
+#box4{
+    width: 1000px;
+    height: 1200px;
+    margin: auto;
+}
+
+/* 박스 5 - 기부내용!*/
+#box5{
+    width :1000px ; 
+    height : 1952px ;
+    margin: auto;
+}
+
+
+/* 박스 6 - 배송안내*/
+#box6{
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+    font-size: 18px;
+}
+#box6 h2, #box7 h2{
+    margin-top: 130px;
+    margin-bottom: 20px;
+}
+#box6 hr{
+    margin-bottom: 20px;
+}
+table tr th{
+    padding-right: 40px;
+    padding-bottom: 5px;
+}
+#box6 p{
+    background-color: #d4d3d3;
+    padding: 20px;
+    margin-top: 20px;
+    line-height: 35px;
+    border-radius: 5px;
+}
+
+/* 박스 7 - 구독자 100자평*/
+#box7{
+    width: 1000px;
+    height: 1400px;
+    margin: auto;
+}
+.r100{
+    height: 150px;
+}
+.r100 select{
+    /* 100자평 남기기 별점 */
+    margin: 30px 0 20px 60px;
+    float: left;
+}
+.r100 textarea{
+    width: 610px;
+    height: 80px;
+    margin-left: 40px;
+    padding: 20px;
+    float: left;
+}
+.r100 input{
+    /* 100자평 남기기 등록버튼 */
+    float: left;
+    border: none;
+    padding: 15px 20px;
+    margin-left: 30px;
+    margin-top: 20px;
+    background-color: #ff9eab;
+    border-radius: 10px;
+    color: white;
+}
+input[type="button"] {
+    cursor: pointer;
+  }
+
+#box7 div ul{
+/* 구독자 리뷰 */
+    height: 100px;
+}
+#box7 div ul li{
+    font-size: 18px;
+    float: left;
+    margin-left: 60px;
+    margin-top: 45px;
+}
+#box7 div ul li:nth-child(2){
+    width: 610px;
+    height: 90px;
+}
+#box7 div ul li:nth-child(3){
+    margin-top: 70px;
+}
+#box7 div ul li a{
+    padding: 15px 10px;
+    background-color: #ff9eab;
+    border-radius: 10px;
+    color: white;
+}
+#box7 div p{
+    display: inline-block;
+    color: white;
+    background-color: #80d8cc;
+    border-radius: 20px;
+    padding: 5px 15px;
+    margin-right: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+#box7 div p:nth-child(2){
+    margin-left: 190px;
+}
+
+#board>li>a{
+    /* 리뷰 더보기 */
+    text-align: center;
+    display: block;
+    background-color:rgba(255, 158, 171,0.5);
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 30px;
+}
+#board li .riview{
+    display: none;
+}
+
+/* 마지막 footer!!! */
+#footer{
+    width: 100%;
+    background: url(../images/footer_bg.jpg);
+    height: 350px;
+}
+.footer_inner1{
+    width: 1320px;
+    margin: auto;
+    padding-top: 50px;
+}
+.footer_inner1 ul> li> a>img{
+    opacity: 0.5;
+}
+.footer_inner1 ul> li> a>img:hover{
+    opacity: 1;
+}
+.footer_inner1 ul{
+    float: right;
+}
+.footer_inner1 li, .footer_inner2 li{
+    float: left;
+    margin-left: 15px;
+}
+.footer_inner2{
+    width: 650px;
+    height: 300px;
+    margin: auto;
+    text-align: center;
+    color: #41505b;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 p{
+    margin: 30px 0;
+}
+.footer_inner2 li:last-child{
+    padding-right: 120px;
+}
+.footer_inner2 a{
+    color: #4e6270;
+    font-family: 'NanumBarunGothic';
+}
+.footer_inner2 a:hover{
+    color: #5c7486;
+}
+
+
+/* 진짜 마지막!! 탑버튼!!! */
+.topbutton{
+    position:fixed; 
+    bottom:50px; 
+    right:50px; 
+    display:none;
+  }
