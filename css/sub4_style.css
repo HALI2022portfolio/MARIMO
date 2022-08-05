@@ -472,13 +472,14 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
 
 /* 박스 6 - 핑크색 무료 다운로드 배너 */
 #box6{
+    
     text-align: left; /* 깃허브에서 수정 */
     width: 100%;
     background: url(../images/sub4_box6_pink_bg.png) no-repeat center top;
-    height: 225px;
 }
 .box6_inner{
-    width: 800px;
+    width: 850px;
+    height: 225px;
     margin: auto;
 }
 
