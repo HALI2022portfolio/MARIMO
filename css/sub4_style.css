@@ -499,7 +499,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
 #box7>p{
     position: absolute;
     height: 72px;
-    width: 240px;
+    width: 250px;
     top: 85px;
     left: 20px;
     font-family: 'NanumBarunGothic';
