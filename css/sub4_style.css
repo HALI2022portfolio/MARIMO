@@ -472,6 +472,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
 
 /* 박스 6 - 핑크색 무료 다운로드 배너 */
 #box6{
+    text-align: left; /* 깃허브에서 수정 */
     width: 100%;
     background: url(../images/sub4_box6_pink_bg.png) no-repeat center top;
     height: 225px;
@@ -489,6 +490,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     position: relative;
 }
 #box7>img{
+    display: block; /* 깃허브에서 수정 */
     float: left;
     height: 55px;
     width: 250px;
@@ -537,6 +539,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     font-family: 'NanumBarunGothic';
 }
 #box7 .marimo{
+    display: block; /* 깃허브에서 수정 */
     float: left;
     width: 491px;
     height: 416px;
