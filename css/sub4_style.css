@@ -176,6 +176,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     /* 에프터 이펙트 */
     width: 100%;
     height: 775px;
+    text-align: center;
 }
 #box1 a{
     display: block;
