@@ -179,7 +179,7 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     text-align: center;
 }
 #box1 a{
-    display: block;
+    display: inline-block;
 }
 
 /* 박스 2 - 지난 매거진 */
