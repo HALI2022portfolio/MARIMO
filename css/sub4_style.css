@@ -178,8 +178,12 @@ display: block 은 제이쿼리 해줘야 해서 여기서 없애줌!!*/
     height: 775px;
     text-align: center;
 }
+#box1 video{
+        width: 100%;
+        display: block;
+}
 #box1 a{
-    display: inline-block;
+    display: block;
 }
 
 /* 박스 2 - 지난 매거진 */
